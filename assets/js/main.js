@@ -35,6 +35,8 @@ generate.addEventListener('click', function() {
         if(!bombe.includes(randomNum)) bombe.push(randomNum);
 }
 
+    let clickCounter = 0;
+
     if (levelSelected.value === 'hard'){
         for (let i = 1; i <= 49; i++) {
             const element = document.createElement('li');
@@ -52,6 +54,13 @@ generate.addEventListener('click', function() {
                         setTimeout(function() {
                             ul.innerHTML = '';
                         }, 1000);
+                        lastClick.innerText = 'Sei riuscito a cliccare su ' + clickCounter + ' caselle prima di finire sopra una bomba.';
+                    } else {
+                        clickCounter++;
+                        if (clickCounter === maxNumber - bombe.length){
+                            ul.innerText = '';
+                            lastClick.innerText = 'HAI VINTO!!! Sei riuscito a cliccare su ' + clickCounter + ' caselle prima di finire sopra una bomba.';
+                        }
                     }
                 });
                 ul.appendChild(element);
@@ -73,6 +82,13 @@ generate.addEventListener('click', function() {
                         setTimeout(function() {
                             ul.innerHTML = '';
                         }, 1000);
+                        lastClick.innerText = 'Sei riuscito a cliccare su ' + clickCounter + ' caselle prima di finire sopra una bomba.';
+                    } else {
+                        clickCounter++;
+                        if (clickCounter === maxNumber - bombe.length){
+                            ul.innerText = '';
+                            lastClick.innerText = 'HAI VINTO!!! Sei riuscito a cliccare su ' + clickCounter + ' caselle prima di finire sopra una bomba.';
+                        }
                     }
                 });
                 ul.appendChild(element);
@@ -94,6 +110,13 @@ generate.addEventListener('click', function() {
                         setTimeout(function() {
                             ul.innerHTML = '';
                         }, 1000);
+                        lastClick.innerText = 'Sei riuscito a cliccare su ' + clickCounter + ' caselle prima di finire sopra una bomba.';
+                    } else {
+                        clickCounter++;
+                        if (clickCounter === maxNumber - bombe.length){
+                            ul.innerText = '';
+                            lastClick.innerText = 'HAI VINTO!!! Sei riuscito a cliccare su ' + clickCounter + ' caselle prima di finire sopra una bomba.';
+                        }
                     }
                 });
                 ul.appendChild(element);
