@@ -1,0 +1,12 @@
+.ratio-100{
+    width: calc(100% / 10);
+    aspect-ratio: 1;
+}
+.ratio-81{
+    width: calc(100% / 9);
+    aspect-ratio: 1;
+}
+.ratio-49{
+    width: calc(100% / 7);
+    aspect-ratio: 1;
+}
